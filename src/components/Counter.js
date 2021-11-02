@@ -49,16 +49,16 @@ STEP 6:
 import React, { useState } from 'react'; /* STEP 0 */
 
 export default function Counter() {
-  const [count, setCount] = useState(1);
+  const [count, setCount] = useState(0);
 
   const increment = () => {
-    /* STEP 4 */
+    setCount(count + 1);
   };
   const decrement = () => {
-    /* STEP 5 */
+    setCount(count - 1);
   };
   const reset = () => {
-    /* STEP 6 */
+    setCount(0);
   };
 
   const style = {
@@ -66,11 +66,9 @@ export default function Counter() {
     marginBottom: '0.3em',
     color: 'royalblue', /* STEP 2 */
   };
-  if (count % 2 === 0){
-    style["color"] = 'royalblue';
-  } else {
-    style["color"] = 'crimson';
-  }
+  
+  count % 2 === 0 ? style.color = "royalblue" : style.color = "crimson"
+
   return (
     <div className='widget-counter container'>
       <h2>Counter</h2>
