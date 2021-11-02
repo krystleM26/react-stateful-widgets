@@ -35,7 +35,7 @@ STEP 6:
 */
 
 
-import React, { useState} from 'react'; /* STEP 0 */
+import React, { useState } from 'react'; /* STEP 0 */
 
 export default function Input() {
   const [inputValue, setInputValue] = useState('');
